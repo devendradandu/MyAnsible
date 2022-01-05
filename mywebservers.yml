@@ -4,22 +4,22 @@
   tasks:
     - name: i want to install software in ubuntu only
       apt:
-        name: apache2
+        name: "{{mywebserverpackforubuntu}}"
         state: present
       when: ansible_os_family=="Debian"
     - name: i want to start apache2 in ubunt only
       service:
-        name: apache2
+        name: "{{mywebserverpackforubuntu}}"
         state: started
       when: ansible_os_family== "Debian" 
 
     - name: I want to install webserver in RedHat only
       yum:
-         name: httpd
+         name: "{{mywebserverpackforredhat}}"
          state: present
       when: ansible_os_family=="RedHat"
     - name: I want to start webserver in RedHat only
       service:
-         name: httpd
+         name: "{{mywebserverpackforredhat}}"
          state: started
       when: ansible_os_family=="RedHat"
