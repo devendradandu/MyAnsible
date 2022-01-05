@@ -2,3 +2,6 @@
 key: val
 mywebserverpackforubuntu: apache2
 mywebserverpackforredhat: httpd 
+
+myjavainstalledonubuntu: openjdk-8-jre
+myjavainstalleonredhat: java-1.8.0-openjdk
