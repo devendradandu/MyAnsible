@@ -1,0 +1,11 @@
+---
+- hosts: 172.31.13.171
+  become: yes
+  vars:
+    myvars1: git
+    myvars2: wget
+    myvars3: tree
+  tasks:
+   - name: want to insall debug
+     debug:
+      msg: "{{myvars1}}"
