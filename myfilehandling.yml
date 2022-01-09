@@ -14,7 +14,8 @@
        src: myindex.j2
        dest: /var/www/html/index.html  
      
-    
+     notify:
+       - restarted webserver
 
    - name: download file and force basic auth
      get_url:
@@ -27,5 +28,8 @@
          path: /home/ubuntu/mydir1
          state: directory
 
- 
-  
+  handlers: 
+   - name: restarted webserver
+     service:
+        name: apache2
+        state: restarted
