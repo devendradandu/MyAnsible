@@ -13,7 +13,10 @@
      template:
        src: myindex.j2
        dest: /var/www/html/index.html  
-
+     
+     notify:
+       - restarted webserver
+       
    - name: download file and force basic auth
      get_url:
       url: https://get.jenkins.io/war-stable/2.319.1/jenkins.war
@@ -25,6 +28,7 @@
          path: /home/ubuntu/mydir
          state: directory
 
+  handlers: 
    - name: restarted webserver
      service:
         name: apache2
