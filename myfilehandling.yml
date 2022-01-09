@@ -28,7 +28,4 @@
          state: directory
 
  
-   - name: restarted webserver
-     service:
-        name: apache2
-        state: restarted
+  
