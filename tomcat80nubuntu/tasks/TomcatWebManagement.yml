@@ -1,4 +1,3 @@
----
 - name: copy tomcat_user file into nodes
   template:
      src:  templates/mytomuser.j2
