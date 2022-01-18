@@ -1,5 +1,5 @@
 ---
-- name: restart tomcat80nubuntu
+- name: restart tomcat 
   systemd:
     state: restarted
     name: tomcat
