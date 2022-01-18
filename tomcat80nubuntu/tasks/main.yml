@@ -1,2 +1,8 @@
 ---
 # tasks file for tomcat80nubuntu
+- include_tasks: InstallJava.yml
+- include_tasks: CreateTomcatUser.yml
+- include_tasks: DownloadTomcat.yml
+- include_tasks: UpdatePermissions.yml
+- include_tasks: CreateServiceFile.yml
+- include_tasks: tomcatstart.yml
